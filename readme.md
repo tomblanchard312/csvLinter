@@ -22,7 +22,7 @@ Before you begin, ensure you have the following installed:
 1. **Clone the Repository**
    Clone this repository to your local machine using Git:
 ```
-   git clone [[repository-url](https://github.com/tomblanchard312/cvssqllinter)]
+   git clone https://github.com/tomblanchard312/cvssqllinter
    cd csvSQLLinter
 ```
 
