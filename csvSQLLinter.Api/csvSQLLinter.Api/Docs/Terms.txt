@@ -1,0 +1,42 @@
+﻿Terms of Service for CSV Linter API
+1. Introduction
+
+Welcome to the CSV Linter API. By accessing or using our API, you agree to be bound by the Apache License 2.0 under which the CSV Linter API is licensed. This Terms of Service document complements the Apache License by explaining your responsibilities when using our API. Please review both this Terms of Service and the Apache License 2.0 before using our API.
+
+2. Acceptance of Terms
+
+By using the CSV Linter API, you signify your acceptance of these terms and conditions. If you do not agree to these terms, please do not use our API.
+
+3. Apache License 2.0
+
+The CSV Linter API is open-source software licensed under the Apache License 2.0. A copy of this license is included with the API and is also available at http://www.apache.org/licenses/LICENSE-2.0. The Apache License allows you to freely use, modify, and distribute the API, but it also places certain responsibilities on you, such as:
+
+You must give proper credit to the original source of the software.
+Modifications to the API must be documented.
+The original Apache License 2.0 text must be included in any copies of the software you distribute.
+4. Use of the API
+
+You are free to use the API for any purpose, including commercial purposes, in accordance with the Apache License 2.0. However, you must not use the API in any manner that:
+
+Violates the Apache License 2.0.
+Is illegal or promotes illegal activities.
+Infringes on any third party's intellectual property rights.
+5. Modifications and Contributions
+
+You are encouraged to modify and improve the API as per your needs. If you choose to contribute your modifications back to the community, we welcome such contributions under the same Apache License 2.0. Contributions must be your own original work and must not infringe the rights of any third party.
+
+6. Disclaimer of Warranties
+
+The CSV Linter API is provided on an "AS IS" basis without warranties of any kind. We make no guarantees regarding the API's accuracy, reliability, or availability.
+
+7. Limitation of Liability
+
+In no event will the authors or copyright holders of the CSV Linter API be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise arising from, out of, or in connection with the API.
+
+8. Changes to Terms
+
+We reserve the right to modify these terms at any time. We will endeavor to notify users of significant changes; however, it is your responsibility to review these terms periodically.
+
+9. Governing Law
+
+These terms shall be governed by and construed in accordance with the laws of the jurisdiction in which we operate, without regard to its conflict of law provisions.

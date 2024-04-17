@@ -7,15 +7,21 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.IO;
 namespace csvSQLLinter.Api.Controllers
-{
+{    /// <summary>
+     /// Handles CSV linting operations.
+     /// </summary>
+    [Route("api/[controller]")]
     [ApiController]
-    [Route("[controller]")]
     public class CsvLintController : ControllerBase
     {
         private readonly CsvLinter _linter;
+        private readonly ILogger<CsvLintController> _logger;
 
-        public CsvLintController()
+        // Dependency injection of CsvLinter and ILogger
+        public CsvLintController(CsvLinter linter, ILogger<CsvLintController> logger)
         {
+            _linter = linter;
+            _logger = logger;
             // Configure the schemas and enumerations
             var schemas = new Dictionary<string, Dictionary<string, SqlServerType>>
         {
@@ -69,7 +75,16 @@ namespace csvSQLLinter.Api.Controllers
             // Initialize the linter with the configured schemas and enumerations
             _linter = new CsvLinter(schemas, enumerations);
         }
-
+      
+        /// <summary>
+        /// Lint a CSV file against a predefined schema.
+        /// </summary>
+        /// <param name="file">The CSV file to lint.</param>
+        /// <param name="schemaType">The type of schema to validate against. Example: 'EmployeeDetails'.</param>
+        /// <returns>A list of linting issues or a success message.</returns>
+        /// <response code="200">Returns the list of issues found or a success message if no issues were found.</response>
+        /// <response code="400">If the file is null, empty, or schema type is not specified.</response>
+        /// <response code="500">If there is an internal server error.</response>
         [HttpPost("lint")]
         public ActionResult<List<string>> LintCsv(IFormFile file, [FromQuery] string schemaType)
         {
