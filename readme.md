@@ -53,7 +53,7 @@ Body: Multipart/form-data with the file upload
 
 Example using cURL:
 ```
-curl -X POST -F "file=@path_to_your_file.csv" http://localhost:5000/csvlint
+curl -X POST -F "file=@path_to_your_file.csv" https://localhost:7014/csvlint
 ```
 Testing
 Included in the project is a sample CSV file Sample_Employee_Data.csv with dummy data for testing. Use this file to test the CSV linting capabilities of the API.
@@ -62,7 +62,7 @@ Contributing
 Contributions to the csvSQLLinter are welcome. Please fork the repository and submit pull requests to contribute.
 
 License
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](License).
 
 
 This `README.md` provides a complete guide to getting started with the `csvSQLLinter` project, how to build and run it, and how to use the included sample CSV for testing. It assumes that the project is hosted in a Git repository, which you'll need to specify the URL for when providing the clone command. Adjust any specific paths, URLs, or additional instructions as needed to match your project's configuration and hosting details.
