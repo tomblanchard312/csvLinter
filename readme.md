@@ -46,7 +46,7 @@ To run the API locally, use the following command from the directory containing 
 ```
 dotnet run
 ```
-The API will start on [http://localhost:5000](https://localhost:7014/) by default. You can access the API endpoints using a browser or tools like Postman to submit CSV files for linting.
+The API will start on [http://localhost:7014](https://localhost:7014/) by default. You can access the API endpoints using a browser or tools like Postman to submit CSV files for linting.
 
 Using the API
 Endpoint: /csvlint
