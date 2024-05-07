@@ -77,7 +77,16 @@ builder.Services.AddSwaggerGen(options =>
 });
 // Configure static files to be served from the 'docs' directory
 builder.Services.AddDirectoryBrowser();
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "MyAllowAnyOrigin",
+                      builder =>
+                      {
+                          builder.AllowAnyOrigin()   // Allow any origin
+                                 .AllowAnyHeader()
+                                 .AllowAnyMethod();
+                      });
+});
 var app = builder.Build();
 app.UseStaticFiles(new StaticFileOptions
 {
@@ -95,8 +104,9 @@ if (app.Environment.IsDevelopment())
         options.SwaggerEndpoint("/swagger/v1/swagger.json", "CSV Linter API V1");
     });
 }
+
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
-
+app.UseCors("MyAllowAnyOrigin");
 app.Run();
