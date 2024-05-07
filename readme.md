@@ -62,9 +62,6 @@ Contributing
 Contributions to the csvSQLLinter are welcome. Please fork the repository and submit pull requests to contribute.
 
 License
-This project is licensed under the [MIT License](https://github.com/tomblanchard312/csvSQLLinter/blob/master/LICENSE.txt).
-
-
-This `README.md` provides a complete guide to getting started with the `csvSQLLinter` project, how to build and run it, and how to use the included sample CSV for testing. It assumes that the project is hosted in a Git repository, which you'll need to specify the URL for when providing the clone command. Adjust any specific paths, URLs, or additional instructions as needed to match your project's configuration and hosting details.
+This project is licensed under the [Apache 2.0 License](LICENSE).
 
 
