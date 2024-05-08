@@ -1,6 +1,6 @@
-# csvSQLLinter
+# csvLinter
 
-The `csvSQLLinter` is a .NET Core Web API project designed to validate CSV files against a specified schema. This tool ensures that CSV files conform to expected formats and data types.
+The `csvLinter` is a .NET Core Web API project designed to validate CSV files against a specified schema. This tool ensures that CSV files conform to expected formats and data types.
 You can add your own datatypes as needed, this is just a simple example.
 
 ## Features
