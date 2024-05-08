@@ -1,12 +1,12 @@
 # csvSQLLinter
 
-The `csvSQLLinter` is a .NET Core Web API project designed to validate CSV files against a specified schema. This tool ensures that CSV files conform to expected formats and data types, specifically tailored to SQL Server data types.
+The `csvSQLLinter` is a .NET Core Web API project designed to validate CSV files against a specified schema. This tool ensures that CSV files conform to expected formats and data types.
 You can add your own datatypes as needed, this is just a simple example.
 
 ## Features
 
 - Validate CSV files for correct number of columns and specific data types.
-- Dynamic schema definitions using a dictionary to map column names to SQL Server data types.
+- Dynamic schema definitions using a Json to map column names, types and values.
 - Easy integration into other systems or as a standalone service.
 
 ## Prerequisites
@@ -20,15 +20,15 @@ Before you begin, ensure you have the following installed:
 1. **Clone the Repository**
    Clone this repository to your local machine using Git:
 ```
-   git clone https://github.com/tomblanchard312/cvssqllinter
-   cd csvSQLLinter
+   git clone https://github.com/tomblanchard312/csvLinter.git
+   cd csvLinter
 ```
 
 Navigate to the API Project
 Change directory to the API project where the .csproj file is located:
 
 ```
-cd csvSQLLinter.Api
+cd csvLinter.Api
 ```
 Restore Dependencies
 Run the following command to restore all the necessary .NET packages:
@@ -56,10 +56,10 @@ Example using cURL:
 curl -X POST -F "file=@path_to_your_file.csv" https://localhost:7014/csvlint
 ```
 Testing
-Included in the project is a sample CSV file Sample_Employee_Data.csv with dummy data for testing. Use this file to test the CSV linting capabilities of the API.
+Included in the project are sample CSV files like Sample_Employee_Data_Good.csv with dummy data for testing. Use this file to test the CSV linting capabilities of the API.
 
 Contributing
-Contributions to the csvSQLLinter are welcome. Please fork the repository and submit pull requests to contribute.
+Contributions to the csvLinter are welcome. Please fork the repository and submit pull requests to contribute.
 
 License
 This project is licensed under the [Apache 2.0 License](LICENSE).
