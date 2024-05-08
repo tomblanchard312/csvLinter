@@ -1,0 +1,29 @@
+{
+  "EmployeeId": {
+    "type": "int"
+  },
+  "PassportID": {
+    "type": "string",
+    "maxLength": 9
+  },
+  "PassportCountry": {
+    "type": "string",
+    "maxLength": 50
+  },
+  "PassportIssuingAuthority": {
+    "type": "string",
+    "maxLength": 100
+  },
+  "DateOfBirth": {
+    "type": "date"
+  },
+  "Gender": {
+    "type": "enum",
+    "values": [
+      "male",
+      "female",
+      "x",
+      "u"
+    ]
+  }
+}

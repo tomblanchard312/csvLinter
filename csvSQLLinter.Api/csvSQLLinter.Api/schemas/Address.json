@@ -1,0 +1,9 @@
+{
+  "EmployeeId": {
+    "type": "int"
+  },
+  "Address": {
+    "type": "string",
+    "maxLength": 200
+  }
+}

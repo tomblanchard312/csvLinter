@@ -1,53 +1,11 @@
-using csvSQLLinter.Api;
+using csvLinter.Api;
 
 using Microsoft.Extensions.FileProviders;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-// Configure schemas and enumerations here
-var schemas = new Dictionary<string, Dictionary<string, csvSQLLinter.Api.Extensions.SqlServerType>>
-{
-    {"EmployeeDetails", new Dictionary<string, csvSQLLinter.Api.Extensions.SqlServerType>
-    {
-        {"EmployeeId", csvSQLLinter.Api.Extensions.SqlServerType.Int},
-        {"Name", csvSQLLinter.Api.Extensions.SqlServerType.Nvarchar},
-        {"HireDate", csvSQLLinter.Api.Extensions.SqlServerType.DateTime},
-        {"Salary", csvSQLLinter.Api.Extensions.SqlServerType.Decimal},
-        {"Salutation", csvSQLLinter.Api.Extensions.SqlServerType.Varchar},
-        {"Gender", csvSQLLinter.Api.Extensions.SqlServerType.Varchar}
-    }},
-    {"Addresses", new Dictionary<string, csvSQLLinter.Api.Extensions.SqlServerType>
-    {
-        {"EmployeeId", csvSQLLinter.Api.Extensions.SqlServerType.Int},
-        {"Address", csvSQLLinter.Api.Extensions.SqlServerType.Varchar}
-    }},
-    {"Passport", new Dictionary<string, csvSQLLinter.Api.Extensions.SqlServerType>
-    {
-        {"EmployeeId", csvSQLLinter.Api.Extensions.SqlServerType.Int},
-        {"PassportID", csvSQLLinter.Api.Extensions.SqlServerType.Nvarchar},
-        {"PassportCountry", csvSQLLinter.Api.Extensions.SqlServerType.Nvarchar},
-        {"PassportIssuingAuthority", csvSQLLinter.Api.Extensions.SqlServerType.Nvarchar},
-        {"DateOfBirth", csvSQLLinter.Api.Extensions.SqlServerType.DateTime},
-        {"Gender", csvSQLLinter.Api.Extensions.SqlServerType.Varchar}
-    }}
-};
-
-var enumerations = new Dictionary<string, Dictionary<string, string[]>>
-{
-    {"EmployeeDetails", new Dictionary<string, string[]>
-    {
-        {"Gender", new[] {"male", "female", "x", "u"}}
-    }},
-    {"Passport", new Dictionary<string, string[]>
-    {
-        {"Gender", new[] {"male", "female", "x", "u"}}
-    }}
-};
 // Add services to the container.
 builder.Services.AddControllers();
-
-// Add the CsvLinter to the DI container
-builder.Services.AddSingleton<CsvLinter>(provider => new CsvLinter(schemas, enumerations));
 
 // Configure Swagger to include generated XML comments and custom API information
 builder.Services.AddSwaggerGen(options =>

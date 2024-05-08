@@ -1,0 +1,11 @@
+{
+  "EmployeeId": { "type": "int" },
+  "Gender": {
+    "type": "enum",
+    "values": [ "male", "female", "x", "u" ]
+  },
+  "Name": {
+    "type": "string",
+    "maxLength": 100
+  }
+}

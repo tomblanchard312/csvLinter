@@ -1,0 +1,57 @@
+@csvSQLLinter.Api_HostAddress = http://localhost:5289
+
+###
+
+GET {{csvSQLLinter.Api_HostAddress}}/api/CsvLint
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="csvFile"; filename="example.csv"
+Content-Type: text/csv
+
+1,John,Doe,john@example.com,1990-01-01
+2,Jane,Doe,jane@example.com,1992-05-15
+3,Bob,Smith,bob@example.com,1988-12-10
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="schemaType"
+
+EmployeeDetails
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+###
+
+GET {{csvSQLLinter.Api_HostAddress}}/api/CsvLint
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="csvFile"; filename="example.csv"
+Content-Type: text/csv
+
+1,123 Main St,Anytown,CA,12345
+2,456 Oak Ave,Somewhere,NY,54321
+3,789 Maple Rd,Nowhere,TX,98765
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="schemaType"
+
+Address
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+###
+
+GET {{csvSQLLinter.Api_HostAddress}}/api/CsvLint
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="csvFile"; filename="example.csv"
+Content-Type: text/csv
+
+1,A1234567,USA,Department of State,1990-01-01,Male
+2,B9876543,Canada,Passport Canada,1985-07-20,Female
+3,C5678901,UK,HM Passport Office,1992-11-05,X
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="schemaType"
+
+Passport
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+###
