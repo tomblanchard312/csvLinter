@@ -57,6 +57,7 @@ curl -X POST -F "file=@path_to_your_file.csv" https://localhost:7014/csvlint
 ```
 Testing
 Included in the project are sample CSV files like Sample_Employee_Data_Good.csv with dummy data for testing. Use this file to test the CSV linting capabilities of the API.
+The samples are named _good.csv for those that should not produce an error response and bad_[reason].csv for those files that should produce an error response and why.
 
 Contributing
 Contributions to the csvLinter are welcome. Please fork the repository and submit pull requests to contribute.
